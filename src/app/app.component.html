@@ -1,0 +1,40 @@
+
+<header class="my-3 ">
+  <h1 class="text-center text-success">{{title}}</h1>
+</header>
+
+<section role="main">
+  <div class="content">
+    <div class="row">
+
+      <div class="col">
+        <hr>
+        <div class="no-content text-center p-3">
+            <div class="loader" *ngIf="items == ''"></div>
+        </div><!--no content-->
+        <div class="items p-3">
+            <div class="card-columns" *ngIf="items != ''">
+                <div class="card mb-3" *ngFor="let item of items">
+
+
+
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.title}}</h5>
+                            <p class="card-text">{{item.body}}</p>
+                          </div>
+                          <div class="card-footer d-flex justify-content-between">
+                              <span class="badge badge-primary">{{item.id}}</span>
+                              <small class="badge badge-info">{{item.userId}}</small>
+                            </div>
+
+                          </div>
+
+
+                </div>
+        </div>
+      </div><!--/col-->
+    </div><!--row-->
+  </div><!--/content-->
+</section>
+
+

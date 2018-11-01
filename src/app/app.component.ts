@@ -18,7 +18,6 @@ export class AppComponent {
     const dataurl = 'https://jsonplaceholder.typicode.com/posts';
     this.http.get(dataurl, { headers: null }).subscribe(response => {
       this.items = response.json();
-      console.log(this.items)
     }, error => {
       this.items = '';
       this.severError = "internal server error"
